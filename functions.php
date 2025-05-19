@@ -56,8 +56,10 @@ function collection_theme_scripts()
 	// wp_style_add_data( 'collection-theme-style', 'rtl', 'replace' );
 
 	// wp_enqueue_script( 'collection-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), COLLECTION_VERSION, true );
-	wp_enqueue_script('tailwind-dev', 'https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4', array(), COLLECTION_VERSION, false);
-	wp_enqueue_script('tailwind', get_template_directory_uri() . './css/style.css', array(), COLLECTION_VERSION, false);
+	// wp_enqueue_script('tailwind-dev', 'https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4', array(), COLLECTION_VERSION, false);
+	// Tailwind for prod
+	wp_enqueue_style('tailwind', get_template_directory_uri() . '/css/style.css', array(), COLLECTION_VERSION, false);
+	wp_enqueue_script('jquery');
 }
 add_action('wp_enqueue_scripts', 'collection_theme_scripts');
 
@@ -66,3 +68,4 @@ add_action('wp_enqueue_scripts', 'collection_theme_scripts');
  */
 require_once get_template_directory() . '/inc/custom-header.php';
 require_once get_template_directory() . '/inc/cleanup.php';
+require_once get_template_directory() . '/inc/tailwind-dev.php';
