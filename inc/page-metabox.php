@@ -1,5 +1,7 @@
 <?php 
 
+// Description: Adds Metabox for `Page Image` in Edit Page
+
 add_action('add_meta_boxes', 'add_page_image_meta_box');
 function add_page_image_meta_box() {
     add_meta_box(

@@ -78,8 +78,9 @@ add_action('wp_enqueue_scripts', 'collection_theme_scripts');
 /**
  * All includes 
  */
-require_once get_template_directory() . '/inc/custom-header.php';
+// require_once get_template_directory() . '/inc/custom-header.php';
 require_once get_template_directory() . '/inc/cleanup.php';
 require_once get_template_directory() . '/inc/frontend-settings.php';
 require_once get_template_directory() . '/inc/page-metabox.php';
+require_once get_template_directory() . '/inc/react-pages.php';
 // require_once get_template_directory() . '/inc/tailwind-dev.php';
